@@ -35,7 +35,7 @@ public class Teszt {
                 }
                 boolean siker = rekeszek.get(rekeszek.size()-1).ujPalack(p);
                 if (!siker) {
-                    rekeszek.add(new Rekesz(5000));
+                    rekeszek.add(new Rekesz(1000));
                     rekeszek.get(rekeszek.size()-1).ujPalack(p);
                 }
                 sor = bReader.readLine();
@@ -49,7 +49,7 @@ public class Teszt {
         Palack p1 = new Palack("tej", 1000, 1000);
         Palack p2 = new Palack("kakaó", 500);
         VisszavalthatoPalack vp1 = new VisszavalthatoPalack("kóla", 200, 200, 25);
-        Rekesz r1 = new Rekesz(9000);
+        Rekesz r1 = new Rekesz(1000);
         r1.ujPalack(p1);
         r1.ujPalack(p2);
         r1.ujPalack(vp1);
@@ -58,5 +58,14 @@ public class Teszt {
         System.out.println(p2.toString() + "\n");
         System.out.println(vp1.toString() + "\n");
         System.out.println(r1.toString());
+    }
+
+    @Override
+    public String toString() {
+        String s = "";
+        for (int i = 0; i < rekeszek.size(); i++) {
+            s += i+1 + ". rekesz\n" + rekeszek.get(i) + "\n\n";
+        }
+        return s;
     }
 }
