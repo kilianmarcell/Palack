@@ -18,4 +18,10 @@ public class Rekesz {
         }
         return ossz;
     }
+
+    public void ujPalack(Palack p) {
+        if (p.suly() + suly() <= maxTeherbiras) {
+            palackok.add(p);
+        }
+    }
 }
