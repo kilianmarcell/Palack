@@ -19,9 +19,12 @@ public class Rekesz {
         return ossz;
     }
 
-    public void ujPalack(Palack p) {
+    public boolean ujPalack(Palack p) {
+        boolean joE = false;
         if (p.suly() + suly() <= maxTeherbiras) {
             palackok.add(p);
+            joE = false;
         }
+        return joE;
     }
 }
