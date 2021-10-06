@@ -27,4 +27,23 @@ public class Rekesz {
         }
         return joE;
     }
+
+    public int osszesPenz() {
+        int ossz = 0;
+        for (Palack p: palackok) {
+            if (p instanceof VisszavalthatoPalack) {
+                ossz += ((VisszavalthatoPalack) p).getPalackDij();
+            }
+        }
+        return ossz;
+    }
+
+    @Override
+    public String toString() {
+        String s = "";
+        for (Palack p: palackok) {
+            s += p + "\n";
+        }
+        return s;
+    }
 }
